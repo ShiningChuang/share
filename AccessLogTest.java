@@ -83,7 +83,7 @@ public class AccessLogTest {
 
 //        List<AccessLogTest> logs = new ArrayList();
         AccessLogTest[] logs = new AccessLogTest[10400000];
-        String fileName = "src/main/java/pascal/taie/analysis/replace/rdmaTest/test/access.log";
+        String fileName = "/mnt/armtest/access.log";
         String line;
         FileReader fileReader = new FileReader(fileName);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -118,8 +118,8 @@ public class AccessLogTest {
         System.out.println("Success!");
         Random random = new Random();
         System.out.println("logArray.length: " + logs.length);
-        for (int i = 0; i < 99; i++) {
-            int randomNum = random.nextInt(logs.length);
+        for (int i = 0; i < 1000000; i++) {
+            int randomNum = random.nextInt(1000000);
             System.out.println(logs[randomNum]);
             Thread.sleep(1000);
         }
